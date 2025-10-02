@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confeitaria Lovers</title>
     <style>
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f4;
@@ -26,6 +25,12 @@
         h1 {
             margin: 5px 0;
             font-size: 2.5rem;
+            margin-right: 20px;
+        }
+
+        .texto {
+            justify-content: center;
+            margin-left: -30px;
         }
 
         #searchForm {
@@ -33,6 +38,7 @@
             display: flex;
             justify-content: center;
             gap: 10px;
+            margin-top: 30px;
         }
 
         #searchInput {
@@ -121,7 +127,7 @@
         .post-text {
             flex: 1;
             min-width: 300px;
-            font-size:larger;
+            font-size: larger;
         }
 
         .post-image {
@@ -172,16 +178,17 @@
 </head>
 
 <body>
-    
+
     <header>
-        <h1>Confetaria Lovers</h1>
+
+        <h1>Confeitaria Lovers</h1>
 
         <form id="searchForm">
             <input type="text" id="searchInput" placeholder="faça sua busca">
             <button type="submit">🔍</button>
         </form>
 
-        <h2>Receitas</h2>
+        <h2 class="texto">Receitas</h2>
 
         <nav>
             <ul>
@@ -191,6 +198,7 @@
             </ul>
         </nav>
     </header>
+
 
     <div class="conteudo">
         <div class="post-header">
@@ -205,9 +213,9 @@
                 <p>Entre seus ingedrientes estão:</p>
                 <ul>
                     <li>12 morangos</li>
-                       <li>leite condensado</li>
-                       <li>1 lata de leite condensado</li>
-                        <li>leite em pó...</li> 
+                    <li>leite condensado</li>
+                    <li>1 lata de leite condensado</li>
+                    <li>leite em pó...</li>
                 </ul>
             </div>
 
