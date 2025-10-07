@@ -155,22 +155,9 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        max-width: 768px {
-            .post-content {
-                flex-direction: column;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-            }
-
-            nav li {
-                margin: 5px;
-            }
-        }
-
         .produtos-container {
             display: grid;
+            justify-content: center;
             grid-template-columns: repeat(5, 1fr);
             gap: 20px;
             margin-top: 30px;
@@ -180,12 +167,18 @@
             border-radius: 0;
         }
 
+        .produto:hover {
+            transform: scale(1.2);
+            height: 300px;
+        }
+
         .produto {
             max-width: 180px;
             width: 100px;
             height: 100px;
             transition: width 0.1s, height 0.1s;
             padding: 15%;
+            margin-right: -100px;
         }
 
         .produto img {
@@ -206,6 +199,20 @@
         .produto img {
             width: 150px;
         }
+
+         (max-width: 768px) {
+            .post-content {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+            }
+
+            nav li {
+                margin: 5px;
+            }
+        }
     </style>
 </head>
 
@@ -214,15 +221,12 @@
 
     <body>
         <header>
-            <img src="logo" alt=logo>
             <h1>Confeitaria Lovers</h1>
 
             <form id="searchForm">
                 <input type="text" id="searchInput" placeholder="faça sua busca">
                 <button type="submit">🔍</button>
             </form>
-
-            <h2>Seja quem te faz feliz!</h2>
 
             <nav>
                 <ul>
@@ -232,90 +236,81 @@
                 </ul>
             </nav>
         </header>
-        
+
+
         <div class="produtos-container">
             <div class="produto">
                 <a href="pagina clicavel.html">
-                    <img src="https://i.ibb.co/rR9jMyZY/morango.jpg" 
-                    alt="morango"></a>
-                    <h3>Morango do amor 
-                        preço: R$ 12 por unidade
-                    </h3>
+                    <img src="https://i.ibb.co/rR9jMyZY/morango.jpg" alt="morango"></a>
+                <h3>Morango do amor
+                    preço: R$ 12 por unidade
+                </h3>
                 </a>
             </div>
 
             <div class="produto">
-                <img src="https://i.ibb.co/fdrTvm08/maracuja.jpg" 
-                alt="maracuja"> </a>
+                <img src="https://i.ibb.co/fdrTvm08/maracuja.jpg" alt="maracuja"> </a>
                 <h3> Morangujá
                     preço: R$9,00 por unidade
                 </h3>
             </div>
 
             <div class="produto">
-                <img src="https://i.ibb.co/7xV6ZjxM/uva.jpg" 
-                alt="uva"></a>
-                <h3>Uva do amor 
+                <img src="https://i.ibb.co/7xV6ZjxM/uva.jpg" alt="uva"></a>
+                <h3>Uva do amor
                     preço: R$9,90 por unidade
                 </h3>
             </div>
 
             <div class="produto">
-                <img src="https://i.ibb.co/ch851fmd/bolo.jpg" 
-                alt="bolo"></a>
-                <h3>Bolo de pote 
+                <img src="https://i.ibb.co/ch851fmd/bolo.jpg" alt="bolo"></a>
+                <h3>Bolo de pote
                     preço: R$15,00 por unidade
                 </h3>
             </div>
 
             <div class="produto">
-                <img src="https://i.ibb.co/s9NmyJNk/torta.jpg" 
-                alt="torta"></a>
+                <img src="https://i.ibb.co/s9NmyJNk/torta.jpg" alt="torta"></a>
                 <h3>torta
                     preço: R$20,00 por unidade
                 </h3>
             </div>
 
             <div class="produto">
-                <img src="https://i.ibb.co/q3976jcb/torta.jpg" 
-                alt="torta"></a>
+                <img src="https://i.ibb.co/q3976jcb/torta.jpg" alt="torta"></a>
                 <h3>Mini torta de uva
                     preço: R$10,90 por unidade
                 </h3>
             </div>
 
             <div class="produto">
-                <img src="https://i.ibb.co/m5W657kz/mousse.jpg" 
-                alt="mousse"></a>
+                <img src="https://i.ibb.co/m5W657kz/mousse.jpg" alt="mousse"></a>
                 <h3>Mousse de morango
                     preço: R$15,00 por unidade
                 </h3>
             </div>
 
             <div class="produto">
-                <img src="https://i.ibb.co/zWZ8X82v/milk-shake.jpg" 
-                alt="milk-shake"></a>
+                <img src="https://i.ibb.co/zWZ8X82v/milk-shake.jpg" alt="milk-shake"></a>
                 <h3>Milk-shake de morango
                     preço: R$12,00 por unidade
                 </h3>
             </div>
 
             <div class="produto">
-                <img src="https://i.ibb.co/bjtPvX1Z/bolo.jpg" 
-                alt="bolo"></a>
-                <h3>Fatias de bolo 
+                <img src="https://i.ibb.co/bjtPvX1Z/bolo.jpg" alt="bolo"></a>
+                <h3>Fatias de bolo
                     preço: R$10,00 por unidade
                 </h3>
             </div>
 
             <div class="produto">
-                <img src="https://i.ibb.co/pBCrgMC9/brigadeiro.jpg" 
-                alt="brigadeiro"></a>
+                <img src="https://i.ibb.co/pBCrgMC9/brigadeiro.jpg" alt="brigadeiro"></a>
                 <h3>Três brigadeiros de morango
                     preço: R$5,00 por unidade
                 </h3>
             </div>
-           
+
     </body>
 
 </html>
