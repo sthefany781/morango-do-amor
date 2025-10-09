@@ -7,10 +7,6 @@
     <title>Confeitaria Lovers</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f4;
@@ -25,11 +21,15 @@
             text-align: center;
             color: white;
             width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         h1 {
             margin: 5px 0;
             font-size: 2.5rem;
+            margin-right: 20px;
         }
 
         #searchForm {
@@ -48,6 +48,25 @@
             width: 250px;
         }
 
+        .direcao-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .direcao {
+            display: flex;
+            padding: 10px 20px;
+            background-color: #ff3232;
+            color: rgb(62, 5, 5);
+            border-radius: 100px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .direcao:hover {
+            background-color: #e02d2d;
+        }
+
         button {
             padding: 10px 15px;
             background-color: #fff1d7;
@@ -55,18 +74,10 @@
             border: none;
             border-radius: 20px;
             cursor: pointer;
-            transition: all 0.3s;
         }
 
         button:hover {
             background-color: #d91414;
-            color: white;
-        }
-
-        nav {
-            background: rgb(152, 5, 5);
-            padding: 10px 0;
-            width: 100%;
         }
 
         nav ul {
@@ -85,11 +96,10 @@
             color: rgb(255, 255, 255);
             text-decoration: none;
             padding: 5px 10px;
-            transition: all 0.3s;
         }
 
         nav a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: #fff1;
             border-radius: 5px;
         }
 
@@ -197,16 +207,16 @@
                 align-items: center;
                 gap: 30px;
             }
-            
+
             .form {
                 margin-right: 0;
                 margin-top: 0;
             }
-            
+
             nav ul {
                 flex-wrap: wrap;
             }
-            
+
             nav li {
                 margin: 5px;
             }
@@ -224,11 +234,13 @@
         </form>
 
         <nav>
-            <ul>
-                <li><a href="resenhas.html">resenhas</a></li>
-                <li><a href="receitas.html">receitas</a></li>
-                <li><a href="lojas.html">lojas</a></li>
-            </ul>
+            <div class="direcao">
+                <ul>
+                    <li><a href="resenhas.html">resenhas</a></li>
+                    <li><a href="receitas.html">receitas</a></li>
+                    <li><a href="lojas.html">lojas</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -243,7 +255,7 @@
                 </a>
             </form>
         </div>
-         
+
         <div class="produto">
             <img src="https://idososbrasil.com.br/wp-content/uploads/2025/07/486593542062062.jpg"
                 alt="Morango do amor - Confeitaria Lovers">
