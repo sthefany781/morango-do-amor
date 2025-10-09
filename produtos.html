@@ -45,6 +45,25 @@
             width: 250px;
         }
 
+        .direcao-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .direcao {
+            display: flex;
+            padding: 10px 20px;
+            background-color: #ff3232;
+            color: rgb(62, 5, 5);
+            border-radius: 100px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .direcao:hover {
+            background-color: #e02d2d;
+        }
+
         button {
             padding: 10px 15px;
             background-color: #fff1d7;
@@ -56,12 +75,6 @@
 
         button:hover {
             background-color: #d91414;
-        }
-
-        nav {
-            background: rgb(152, 5, 5);
-            padding: 10px 0;
-            width: 100%;
         }
 
         nav ul {
@@ -229,11 +242,13 @@
             </form>
 
             <nav>
+                <div class="direcao">
                 <ul>
                     <li><a href="resenhas.html">resenhas</a></li>
                     <li><a href="receitas.html">receitas</a></li>
                     <li><a href="lojas.html">lojas</a></li>
                 </ul>
+            </div>
             </nav>
         </header>
 
