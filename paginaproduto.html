@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confeitaria Lovers</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to left, rgb(171, 0, 0), rgb(255, 99, 99), rgb(171, 0, 0));
+            padding: 1px 0;
+            text-align: center;
+            color: white;
+            width: 100%;
+        }
+
+        h1 {
+            margin: 5px 0;
+            font-size: 2.5rem;
+        }
+
+        #searchForm {
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        #searchInput {
+            padding: 10px;
+            font-size: 14px;
+            border: 2px solid #ccc;
+            border-radius: 20px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #fff1d7;
+            color: rgb(149, 30, 30);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background-color: #d91414;
+            color: white;
+        }
+
+        nav {
+            background: rgb(152, 5, 5);
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .pedido-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 50px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .form {
+            background: rgb(174, 59, 59);
+            max-width: 400px;
+            width: 100%;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.24);
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+
+        .form h2 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .form input {
+            font-family: "Roboto", sans-serif;
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 1px solid #ccc;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+
+        .form button {
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: #ff0000;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .form button:hover,
+        .form button:active,
+        .form button:focus {
+            background: #602c72;
+        }
+
+        .form .message {
+            margin: 15px 0 0;
+            color: #b3b3b3;
+            font-size: 12px;
+        }
+
+        .form .message a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .form .register-form {
+            display: none;
+        }
+
+        .produto {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .produto img {
+            width: 100%;
+            max-width: 335px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .produto h2 {
+            margin-top: 15px;
+            color: #a11c1c;
+            font-size: 1.8rem;
+        }
+
+        @media (max-width: 768px) {
+            .pedido-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+            
+            .form {
+                margin-right: 0;
+                margin-top: 0;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+            }
+            
+            nav li {
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Confeitaria Lovers</h1>
+
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="faça sua busca">
+            <button type="submit">🔍</button>
+        </form>
+
+        <nav>
+            <ul>
+                <li><a href="resenhas.html">resenhas</a></li>
+                <li><a href="receitas.html">receitas</a></li>
+                <li><a href="lojas.html">lojas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="pedido-container">
+        <div class="form">
+            <form class="login-form">
+                <h2>Morango do amor</h2>
+                <input type="text" placeholder="ENDEREÇO" />
+                <input type="text" placeholder="FORMA DE PAGAMENTO" />
+                <a href="pagina_clicavel2.html">
+                    <button type="button">REGISTRAR PEDIDO</button>
+                </a>
+            </form>
+        </div>
+         
+        <div class="produto">
+            <img src="https://idososbrasil.com.br/wp-content/uploads/2025/07/486593542062062.jpg"
+                alt="Morango do amor - Confeitaria Lovers">
+            <h2>Morango do amor</h2>
+        </div>
+    </div>
+</body>
+
+</html>
